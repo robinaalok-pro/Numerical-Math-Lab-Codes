@@ -2,7 +2,7 @@
 #include<stdio.h>
 
 int n;
-//Converts the Augmented matrix to Upper Triangular Matrix form
+
 void convertToUpperTriangular(float a[][n+1],int n)
 {
     int i,j,x,y,k;
@@ -17,7 +17,7 @@ void convertToUpperTriangular(float a[][n+1],int n)
              for(k=0;k<n+1;k++)
                 a[j][k]=a[j][k] -( ratio * a[i][k]);
 
-             //print the Matrix after changed row (Intermediate forms)
+            
              printf("Intermediate forms:\n");
              for( x=0;x<n;x++)
              {
@@ -32,7 +32,7 @@ void convertToUpperTriangular(float a[][n+1],int n)
      }
 }
 
-//Performs Back Substitution to find values of Unknowns
+
 void ApplyBackSubstitution(float a[][n+1],float value[],int n)
 {   
     int i,j;
@@ -48,7 +48,7 @@ void ApplyBackSubstitution(float a[][n+1],float value[],int n)
     } 
 }
 
-//prints the Value of Unknowns
+
 void print(float value[],int n)
 {  
    int i;
